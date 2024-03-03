@@ -6,7 +6,7 @@ const MessageSender = () => {
   const [response, setResponse] = useState('');
 
   const sendToServer = () => {
-    axios.post('http://localhost:3001/change-message', { message })
+    axios.post('http://localhost:5000/change-message', { message })
       .then(res => setResponse(res.data.message))
       .catch(() => setResponse('Error sending to server'));
   };
